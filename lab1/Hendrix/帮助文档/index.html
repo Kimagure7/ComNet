@@ -1,0 +1,890 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Hendrix - Personal Portfolio HTML Template</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/table.css">
+</head>
+<body>
+	<header class="dt-header dt-header_blue">
+		<span class="dt-logo">Hendrix - Personal Portfolio HTML Template</span>
+	</header>	
+	<div class="dt-container dt-container_flex">
+		<aside class="dt-navbar">
+			<nav class="dt-navbar__nav">
+				<div class="dt-navbar__section">
+					<ul class="dt-navbar__list">
+						<li><a href="#files_structure" class="dt-navbar__link">File structure</a></li>
+						<li><a href="#settings" class="dt-navbar__link">Settings</a></li>
+						<li><a href="#include_fonts" class="dt-navbar__link">Fonts</a></li>
+						<li><a href="#conts" class="dt-navbar__link">Contact Form PHP</a></li>
+						<li>
+							<a href="#html_structure" class="dt-navbar__link">HTML structure</a>
+							<ul class="dt-navbar__list">
+								<li><a href="#html_structure_started" class="dt-navbar__link dt-navbar__link_nested">"Started" section</a></li>
+								<li><a href="#html_structure_about" class="dt-navbar__link dt-navbar__link_nested">"About" section</a></li>
+								<li><a href="#html_structure_service" class="dt-navbar__link dt-navbar__link_nested">"Service" section</a></li>
+								<li><a href="#html_structure_portfolio" class="dt-navbar__link dt-navbar__link_nested">"Portfolio" section</a></li>
+								<li><a href="#html_structure_contacts" class="dt-navbar__link dt-navbar__link_nested">"Contacts" section</a></li>
+							</ul>
+						</li>
+						<li><a href="#icons" class="dt-navbar__link">Icons</a></li>
+						<li><a href="#credits" class="dt-navbar__link">Credits</a></li>
+					</ul>
+				</div>		
+			</nav>
+		</aside>	
+		<div class="dt-content dt-content_scroll-bar-yes">
+			<div class="dt-section">
+				<h2 class="dt-title">Hendrix - Personal Portfolio HTML Template</h2>
+				<p>By:Olexandr Beshley</p>
+				 
+			</div>		
+			<article id="files_structure" class="dt-section">
+				<h2 class="dt-title">File structure</h2>
+				<p>After unpacking archive, you'll see this structure:</p>
+				<div class="dt-info-block">
+					<pre class="code language-html">
+						<code>
+html/
+│ 
+├──doc/
+├──template/		
+│──│──default(blue, green, pink, purple, red)/
+│──│──│──css/
+│──│──│──│──animate.css
+│──│──│──│──basic.css
+│──│──│──│──layout.css
+│──│──│──│──blogs.css
+│──│──│──│──ionicons.css
+│──│──│──│──magnific-popup.css
+│──│──│──fonts/
+│──│──│──images/
+│──│──│──js/
+│──│──│──│──main.js
+│──│──│──│──imagesloaded.pkgd.js
+│──│──│──│──jquery.min.js
+│──│──│──│──jquery.validate.js
+│──│──│──│──magnific-popup.js
+│──│──│──│──masonry.pkgd.js
+│──│──│──│──masonry-filter.js
+│──│──│──│──jquery.mb.YTPlayer.js
+│──│──│──│──typed.js
+│──│──│──│──particles.js
+│──│──│──│──particles-setting.js
+│──│──│──less/
+│──│──│──│──basic.less
+│──│──│──│──layout.less
+│──│──│──│──blogs.less
+│──│──│──│──setting.less
+│──│──│──index.html
+│──│──│──index-particles.html
+│──│──│──index-video.html
+│──│──│──blog.html
+│──│──│──blog-inner.html
+						</code>
+					</pre>
+				</div>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">css</span> - all CSS for pages
+						<ul class="dt-list dt-list_nested">
+							<li><span class="dt-label dt-label_bold">animate.css</span> - CSS for animations</li>
+							<li><span class="dt-label dt-label_bold">ionicons.css</span> - CSS for "ionicons" icons</li>
+							<li><span class="dt-label dt-label_bold">magnific-popup.css</span> - CSS for "Magnific Popup" plugin</li>
+							<li><span class="dt-label dt-label_bold">basic.css</span> - CSS for basic styles</li>
+							<li><span class="dt-label dt-label_bold">layout.css</span> - CSS for template layout</li>
+							<li><span class="dt-label dt-label_bold">blogs.css</span> - CSS for template blog</li>
+						</ul>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">less</span> - all LESS for pages
+						<ul class="dt-list dt-list_nested">
+							<li><span class="dt-label dt-label_bold">setting.less</span> - LESS for setting template</li>
+							<li><span class="dt-label dt-label_bold">basic.less</span> - LESS for basic styles</li>
+							<li><span class="dt-label dt-label_bold">layout.less</span> - LESS for template layout</li>
+							<li><span class="dt-label dt-label_bold">blogs.less</span> - LESS for template blog</li>
+						</ul>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">js</span> - all JS for pages
+						<ul class="dt-list dt-list_nested">
+							<li><span class="dt-label dt-label_bold">main.js</span> - Main JS for template</li>
+							<li><span class="dt-label dt-label_bold">imagesloaded.pkgd.js</span> - JS plugin for masonry</li>
+							<li><span class="dt-label dt-label_bold">jquery.min.js</span> - jQuery library</li>
+							<li><span class="dt-label dt-label_bold">jquery.validate.js</span> - JS plugin for validate forms</li>
+							<li><span class="dt-label dt-label_bold">magnific-popup.js</span> - JS plugin for popups</li>
+							<li><span class="dt-label dt-label_bold">masonry.pkgd.js</span> - Masonry plugin for: "Portfolio" items</li>
+							<li><span class="dt-label dt-label_bold">masonry-filter.js</span> - Masonry Plugin for "Portfolio" filter</li>
+							<li><span class="dt-label dt-label_bold">jquery.mb.YTPlayer.js</span> - Plugin for Youtube Video Background</li>
+							<li><span class="dt-label dt-label_bold">typed.js</span> - Plugin for typing text</li>
+							<li><span class="dt-label dt-label_bold">particles.js</span> - Plugin for Particles Background</li>
+							<li><span class="dt-label dt-label_bold">particles-setting.js</span> - Plugin for setting Particles</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article id="settings" class="dt-section">
+				<h2 class="dt-title">Settings</h2>
+				<p>
+					For editing the template you can use following settings, folder "/less/setting.less" .
+				</p>
+
+				<table>
+					<thead>
+					<tr>
+						<th>Name</th>
+						<th>Value</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="3"><span class="dt-label dt-label_bold">Colors setting for template elements</span></td>
+						</tr>
+						<tr>
+							<td>@default-color</td>
+							<td>#898989</td>
+							<td>Default color</td>
+						</tr>
+						<tr>
+							<td>@extra-color</td>
+							<td>#999999</td>
+							<td>Extra color</td>
+						</tr>
+						<tr>
+							<td>@dark-color</td>
+							<td>#292929</td>
+							<td>Dark color</td>
+						</tr>
+						<tr>
+							<td>@light-color</td>
+							<td>#f9f9f9</td>
+							<td>Light color</td>
+						</tr>
+						<tr>
+							<td>@white-color</td>
+							<td>#fff</td>
+							<td>White color</td>
+						</tr>
+						<tr>
+							<td>@extra-white-color</td>
+							<td>rgba(0,0,0,0.1)</td>
+							<td>Extra White color</td>
+						</tr>
+						<tr>
+							<td>@active-color</td>
+							<td>#ede574</td>
+							<td>template color</td>
+						</tr>
+						<tr>
+							<td>@error-color</td>
+							<td>red</td>
+							<td>Error field color</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="dt-label dt-label_bold">Fonts setting for template</span></td>
+						</tr>
+						<tr>
+							<td>@default-font</td>
+							<td>'Poppins'</td>
+							<td>Default font for template</td>
+						</tr>
+						<tr>
+							<td>@extra2-font</td>
+							<td>'Kaushan Script'</td>
+							<td>Extra font 2 for template</td>
+						</tr>
+						<tr>
+							<td>@icons-font</td>
+							<td>'Ionicons'</td>
+							<td>Icons font for template</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="dt-label dt-label_bold">Sizes setting for template</span></td>
+						</tr>
+						<tr>
+							<td>@large-size</td>
+							<td>24px</td>
+							<td>Large Size</td>
+						</tr>
+						<tr>
+							<td>@default-size</td>
+							<td>15px</td>
+							<td>Default Size</td>
+						</tr>
+						<tr>
+							<td>@small-size</td>
+							<td>13px</td>
+							<td>Small Size</td>
+						</tr>
+						<tr>
+							<td>@extra-small-size</td>
+							<td>12px</td>
+							<td>Extra Small Size</td>
+						</tr>
+						<tr>
+							<td>@title-size</td>
+							<td>100px</td>
+							<td>Title Size</td>
+						</tr>
+						<tr>
+							<td>@subtitle-size</td>
+							<td>16px</td>
+							<td>Subtitle Size</td>
+						</tr>
+						<tr>
+							<td>@h1-size</td>
+							<td>44px</td>
+							<td>H1 Size</td>
+						</tr>
+						<tr>
+							<td>@h2-size</td>
+							<td>38px</td>
+							<td>H2 Size</td>
+						</tr>
+						<tr>
+							<td>@h3-size</td>
+							<td>34px</td>
+							<td>H3 Size</td>
+						</tr>
+						<tr>
+							<td>@h4-size</td>
+							<td>30px</td>
+							<td>H4 Size</td>
+						</tr>
+						<tr>
+							<td>@h5-size</td>
+							<td>26px</td>
+							<td>H5 Size</td>
+						</tr>
+						<tr>
+							<td>@h6-size</td>
+							<td>22px</td>
+							<td>H6 Size</td>
+						</tr>
+						<tr>
+							<td>@default-icon-size</td>
+							<td>24px</td>
+							<td>Default icons size</td>
+						</tr>
+						<tr>
+							<td>@extra-icon-size</td>
+							<td>18px</td>
+							<td>Extra icons size</td>
+						</tr>
+						<tr>
+							<td>@default-letter-spacing</td>
+							<td>0.02em</td>
+							<td>Default Letter Spacing</td>
+						</tr>
+						<tr>
+							<td>@extra-letter-spacing</td>
+							<td>-0.045em</td>
+							<td>Extra Letter Spacing</td>
+						</tr>
+						<tr>
+							<td>@line-height</td>
+							<td>28px</td>
+							<td>Default Line-height for text</td>
+						</tr>
+						<tr>
+							<td>@extra-line-height</td>
+							<td>22px</td>
+							<td>Extra Line-height for text</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="dt-label dt-label_bold">Color template</span></td>
+						</tr>
+						<tr>
+							<td>@active-color</td>
+							<td>#fdd912</td>
+							<td>Default template color</td>
+						</tr>
+                        <tr>
+							<td>@active-color</td>
+							<td>#7b8ffd</td>
+							<td>Blue template color</td>
+						</tr>
+                        <tr>
+							<td>@active-color</td>
+							<td>#78af48</td>
+							<td>Green template color</td>
+						</tr>
+                        <tr>
+							<td>@active-color</td>
+							<td>#ff5e94</td>
+							<td>Pink template color</td>
+						</tr>
+                        <tr>
+							<td>@active-color</td>
+							<td>#c446da</td>
+							<td>Purple template color</td>
+						</tr>
+                        <tr>
+							<td>@active-color</td>
+							<td>#f16363</td>
+							<td>Red template color</td>
+						</tr>
+					</tbody>
+				</table>				
+			</article>
+			<article id="include_fonts" class="dt-section">
+				<h2 class="dt-title">Include of fonts</h2>
+				<p>To use fonts, you must add one tag 'link' from section below to head section.</p>
+				<pre class="code language-html">
+					<code>
+&lt;link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CPoppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"&gt;
+					</code>
+				</pre>	
+				<p>
+					Next step is to set the @default-font, @extra-font and @extra2-font option with using settings table.
+				</p>				
+			</article>
+			<article id="conts" class="dt-section">
+				<h2 class="dt-title">Contact Form PHP</h2>
+				<p>To modify the form is submitted, you can use the following settings, folders "/mailer/form_setting.php" and "/mailer/feedback.php"</p>				
+			</article>
+			<article id="html_structure" class="dt-section">
+				<h2 class="dt-title">HTML structure</h2>
+				<pre class="code language-html">
+					<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	
+	&lt;!-- Basic --&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;title&gt;Hendrix - Personal Portfolio HTML Template&lt;/title&gt;
+	&lt;meta name="description" content=""&gt;
+	&lt;meta name="keywords" content=""&gt;
+	
+	&lt;!-- Mobile Specific Metas --&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /&gt;
+	
+	&lt;!-- Load Fonts --&gt;
+	&lt;link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CPoppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"&gt;
+	
+	&lt;!-- CSS --&gt;
+	&lt;link rel="stylesheet" href="css/basic.css" /&gt;
+	&lt;link rel="stylesheet" href="css/layout.css" /&gt;
+	&lt;link rel="stylesheet" href="css/blogs.css" /&gt;
+	&lt;link rel="stylesheet" href="css/ionicons.css" /&gt;
+	&lt;link rel="stylesheet" href="css/magnific-popup.css" /&gt;
+	&lt;link rel="stylesheet" href="css/animate.css" /&gt;
+	
+	&lt;!--[if lt IE 9]&gt;
+	&lt;script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
+	&lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+	
+	&lt;!-- Favicon --&gt;
+	&lt;link rel="shortcut icon" href="images/favicons/favicon.ico"&gt;
+	
+&lt;/head&gt;
+
+&lt;body&gt;
+	
+	&lt;!-- Page --&gt;
+	&lt;div class="page"&gt;
+
+		&lt;!-- Preloader --&gt;
+		&lt;div class="preloader"&gt;
+			&lt;div class="centrize full-width"&gt;
+				&lt;div class="vertical-center"&gt;
+					&lt;div class="spinner"&gt;
+						&lt;div class="double-bounce1"&gt;&lt;/div&gt;
+						&lt;div class="double-bounce2"&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;header class="header"&gt;
+			&lt;div class="fw"&gt;
+				&lt;div class="logo"&gt;
+					&lt;a href="#"&gt;Hendrix&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;a href="#" class="menu-btn"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+				&lt;div class="top-menu"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#about-section"&gt;About&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#services-section"&gt;What I Do&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#works-section"&gt;Works&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#blog-section"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#contact-section"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;a href="#" class="close"&gt;&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/header&gt;
+		
+		&lt;!-- Container --&gt;
+		&lt;div class="container"&gt;
+
+			...
+
+			&lt;!-- Footer --&gt;
+			&lt;footer class="align-center"&gt;
+				&lt;div class="socials"&gt;
+					&lt;a target="blank" href="https://www.facebook.com"&gt;&lt;i class="icon ion ion-social-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a target="blank" href="https://github.com"&gt;&lt;i class="icon ion ion-social-github"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a target="blank" href="https://twitter.com"&gt;&lt;i class="icon ion ion-social-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a target="blank" href="https://www.youtube.com"&gt;&lt;i class="icon ion ion-social-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a target="blank" href="https://plus.google.com"&gt;&lt;i class="icon ion ion-social-googleplus"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class="copy"&gt;© 2016 Hendrix. all rights reserved.&lt;/div&gt;
+			&lt;/footer&gt;
+			
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+	
+	&lt;!-- jQuery Scripts --&gt;
+	&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script src="js/jquery.validate.js"&gt;&lt;/script&gt;
+	&lt;script src="js/masonry.pkgd.js"&gt;&lt;/script&gt;
+	&lt;script src="js/imagesloaded.pkgd.js"&gt;&lt;/script&gt;
+	&lt;script src="js/masonry-filter.js"&gt;&lt;/script&gt;
+	&lt;script src="js/jquery.nicescroll.js"&gt;&lt;/script&gt;
+	&lt;script src="js/magnific-popup.js"&gt;&lt;/script&gt;
+	&lt;script src="js/jquery.mb.YTPlayer.js"&gt;&lt;/script&gt;
+	&lt;script src="js/particles.js"&gt;&lt;/script&gt;
+	&lt;script src="js/typed.js"&gt;&lt;/script&gt;
+	
+	&lt;!-- Main Scripts --&gt;
+	&lt;script src="js/main.js"&gt;&lt;/script&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+					</code>
+				</pre>				
+			</article>
+			<article id="html_structure_started" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Started" section</h2>
+				<pre class="code language-html">
+					<code>
+&lt;!-- Section Started --&gt;
+&lt;div class="section started"&gt;
+	&lt;div class="slide" style="background-image: url(images/slide-bg-1.jpg);"&gt;&lt;/div&gt;
+	&lt;div class="centrize full-width"&gt;
+		&lt;div class="vertical-center"&gt;
+			&lt;div class="st-title align-center"&gt;
+				&lt;div class="typing-title"&gt;
+					&lt;p&gt;Developer&lt;/p&gt;
+					&lt;p&gt;Photographer&lt;/p&gt;
+					&lt;p&gt;Coder&lt;/p&gt;
+					&lt;p&gt;Blogger&lt;/p&gt;
+					&lt;p&gt;Freelancer&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;span class="typed-title"&gt;&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class="socials"&gt;
+				&lt;a target="blank" href="https://www.facebook.com"&gt;&lt;i class="icon ion ion-social-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a target="blank" href="https://github.com"&gt;&lt;i class="icon ion ion-social-github"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a target="blank" href="https://twitter.com"&gt;&lt;i class="icon ion ion-social-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a target="blank" href="https://www.youtube.com"&gt;&lt;i class="icon ion ion-social-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a target="blank" href="https://plus.google.com"&gt;&lt;i class="icon ion ion-social-googleplus"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;a href="#" class="mouse-btn"&gt;&lt;i class="icon ion ion-chevron-down"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+					</code>
+				</pre>				
+			</article>
+			<article id="html_structure_about" class="dt-section">
+				<h2 class="dt-title">HTML structure of "About" section</h2>
+				<pre class="code language-html">
+					<code>
+&lt;!-- Section About --&gt;
+&lt;div class="section about align-left" id="about-section"&gt;
+	&lt;div class="fw"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col col-m-12 col-t-4 col-d-4"&gt;
+				&lt;div class="profile"&gt;
+					&lt;img src="images/profile.jpg" alt="" /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-8 col-d-8"&gt;
+				&lt;div class="text-box"&gt;
+					&lt;h1&gt;I'm Steven Hendrix, &lt;br /&gt;Web Designer & Web Developer &lt;br /&gt;from United States, California.&lt;/h1&gt;
+					&lt;p&gt;
+						I have rich experience in web site design & building and customization. Also I am good at html, css, javascript, wordpress, php, jquery, bootstrap. I love to talk with you about our unique approach. Feel free to contact me writing an email with your project idea.
+					&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="bts"&gt;
+					&lt;a href="#" class="btn extra"&gt;Download Resume&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+					</code>
+				</pre>				
+			</article>
+			<article id="html_structure_service" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Service" section</h2>		
+				<pre class="code language-html">
+					<code>
+&lt;!-- Section Services --&gt;
+&lt;div class="section services gray align-left" id="services-section"&gt;
+	&lt;div class="fw"&gt;
+		&lt;div class="titles"&gt;
+			&lt;div class="title"&gt;What I Do&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-ios-browsers-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;UI/UX Design&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-ios-lightbulb-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;Brand Identity&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-ios-color-wand-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;Web Design&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-social-android-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;Mobile Apps&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-ios-analytics-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;Analytics&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4"&gt;
+				&lt;div class="service-item"&gt;
+					&lt;div class="circle"&gt;&lt;i class="icon ion ion-ios-camera-outline"&gt;&lt;/i&gt;&lt;/div&gt;
+					&lt;div class="name"&gt;Photography&lt;/div&gt;
+					&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+					</code>
+				</pre>							
+			</article>
+			<article id="html_structure_portfolio" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Portfolio" section</h2>		
+				<pre class="code language-html">
+					<code>
+&lt;!-- Portfolio --&gt;
+&lt;div class="section works align-left" id="works-section"&gt;
+	&lt;div class="fw"&gt;
+		&lt;div class="titles"&gt;
+			&lt;div class="title"&gt;Recent Works&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="filters"&gt;
+			&lt;div class="f_btn active"&gt;
+				&lt;label&gt;&lt;input type="radio" name="fl_radio" value="box-item" /&gt;All&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class="f_btn"&gt;
+				&lt;label&gt;&lt;input type="radio" name="fl_radio" value="f-branding" /&gt;Branding&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class="f_btn"&gt;
+				&lt;label&gt;&lt;input type="radio" name="fl_radio" value="f-mockups" /&gt;Mockups&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class="f_btn"&gt;
+				&lt;label&gt;&lt;input type="radio" name="fl_radio" value="f-ui" /&gt;UI Kits&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class="f_btn"&gt;
+				&lt;label&gt;&lt;input type="radio" name="fl_radio" value="f-photo" /&gt;Photography&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row box-items"&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-mockups"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-1" class="has-popup"&gt;&lt;img src="images/works/work1.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-1" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work1.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;Mockups&lt;/div&gt;
+							&lt;h4&gt;Shopping Bag PSD MockUp&lt;/h4&gt;
+							&lt;p&gt;
+								Here’s a new b-cards mock-up with several business cards scattered across the scene. The PSD file allows you to easily. Here’s a new b-cards mock-up with several business cards scattered across the scene.
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-branding"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-2" class="has-popup"&gt;&lt;img src="images/works/work2.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-2" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work2.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;Branding&lt;/div&gt;
+							&lt;h4&gt;Hanging Wall Sign&lt;/h4&gt;
+							&lt;p&gt;
+								The freebie of the day is a logo design kit with an original theme that will help you create 
+								stunning mountain bike related logos in just minutes.
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-mockups"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-3" class="has-popup"&gt;&lt;img src="images/works/work3.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-3" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work3.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;Mockups&lt;/div&gt;
+							&lt;h4&gt;Realistic Business Cards&lt;/h4&gt;
+							&lt;p&gt;
+								Today we’re happy to share with you the mockup of a classic notebook that will help you showcase your drawings. Today we’re happy to share with you the mockup of a classic notebook that will help.
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-branding"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-4" class="has-popup"&gt;&lt;img src="images/works/work4.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-4" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work4.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;Branding&lt;/div&gt;
+							&lt;h4&gt;Juice Bottle Packaging&lt;/h4&gt;
+							&lt;p&gt;
+								Today we have for you a set of 20 icons available in 2 styles: colored flat and line version, 
+								designed on a 128px grid. These polished icons come in multiple formats so you can easily include them in your projects.
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-photo"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-5" class="has-popup"&gt;&lt;img src="images/works/work5.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-5" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work5.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;Photography&lt;/div&gt;
+							&lt;h4&gt;Mug PSD MockUp&lt;/h4&gt;
+							&lt;p&gt;
+								Mapogo is an expertly crafted UI kit perfect for iOS designers and developers. The free sample includes 10 screens (750×1334 px) that can be easily customized in Photoshop
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col col-m-12 col-t-6 col-d-4 box-item f-ui"&gt;
+				&lt;div class="item"&gt;
+					&lt;div class="desc"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#popup-6" class="has-popup"&gt;&lt;img src="images/works/work6.jpg" alt="" /&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div id="popup-6" class="popup-box mfp-fade mfp-hide"&gt;
+					&lt;div class="content"&gt;
+						&lt;div class="image"&gt;
+							&lt;img src="images/works/work6.jpg" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="desc"&gt;
+							&lt;div class="category"&gt;UI Kits&lt;/div&gt;
+							&lt;h4&gt;A4 Paper PSD&lt;/h4&gt;
+							&lt;p&gt;
+								The freebie of the day is Chameleon, a modern UI kit perfect to use for creating a stylish and clean mobile app. This kit includes 10 screens from various categories that can be easily edited.
+							&lt;/p&gt;
+							&lt;a href="#" class="btn"&gt;View Project&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="clear"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+					</code>
+				</pre>							
+			</article>	
+			<article id="html_structure_contacts" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Contacts" section</h2>		
+				<pre class="code language-html">
+					<code>
+&lt;!-- Section Contacts --&gt;
+&lt;div class="section contacts align-left" id="contact-section"&gt;
+	&lt;div class="fw"&gt;
+		&lt;div class="titles"&gt;
+			&lt;div class="title"&gt;Contact Me&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="contact-form"&gt;
+			&lt;form id="cform" method="post"&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col col-m-12 col-t-6 col-d-6"&gt;
+						&lt;div class="value"&gt;
+							&lt;input type="text" name="name" placeholder="Name *" /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col col-m-12 col-t-6 col-d-6"&gt;
+						&lt;div class="value"&gt;
+							&lt;input type="tel" name="tel" placeholder="Phone *" /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col col-m-12 col-t-6 col-d-6"&gt;
+						&lt;div class="value"&gt;
+							&lt;input type="text" name="email" placeholder="Email *" /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col col-m-12 col-t-6 col-d-6"&gt;
+						&lt;div class="value"&gt;
+							&lt;input type="text" name="subject" placeholder="Subject *" /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col col-m-12 col-t-12 col-d-12"&gt;
+						&lt;div class="value"&gt;
+							&lt;textarea name="message" placeholder="Message"&gt;&lt;/textarea&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col col-m-12 col-t-12 col-d-12"&gt;
+						&lt;a href="#" class="btn" onclick="$('#cform').submit(); return false;"&gt;Send Message&lt;/a&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+			&lt;div class="alert-success"&gt;
+				&lt;p&gt;Thanks, your message is sent successfully. We will contact you shortly!&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+					</code>
+				</pre>							
+			</article>
+			<article id="icons" class="dt-section">
+				<h2 class="dt-title">Icons</h2>
+				<p>
+					In this template are defined some of classes for icons, your can see all icons here - http://ionicons.com/.
+				</p>
+			</article>
+			<article id="credits" class="dt-section">
+				<h2 class="dt-title">Sourse & Credits</h2>
+				<h3>Scripts</h3>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">Animate.css</span> <a target="_blank" href="https://daneden.github.io/animate.css/">https://daneden.github.io/animate.css/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">jQuery</span> <a target="_blank" href="https://jquery.com/">https://jquery.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Masonry</span> <a target="_blank" href="http://masonry.desandro.com/">http://masonry.desandro.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">imagesLoaded</span> <a target="_blank" href="http://imagesloaded.desandro.com/">http://imagesloaded.desandro.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Typed.js</span> <a target="_blank" href="https://github.com/mattboldt/typed.js/">https://github.com/mattboldt/typed.js/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">jQuery Validation Plugin</span> <a target="_blank" href="http://jqueryvalidation.org/">http://jqueryvalidation.org/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Magnific Popup</span> <a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">jquery.mb.YTPlayer</span> <a target="_blank" href="https://github.com/pupunzi/jquery.mb.YTPlayer">https://github.com/pupunzi/jquery.mb.YTPlayer</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Multiple Filter Masonry</span> <a target="_blank" href="http://dynamick.github.io/multiple-filter-masonry/">http://dynamick.github.io/multiple-filter-masonry/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Particles.js</span> <a target="_blank" href="https://github.com/VincentGarreau/particles.js/">https://github.com/VincentGarreau/particles.js/</a>
+					</li>
+				</ul>
+				<h3>Fonts</h3>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">Poppins</span> <a target="_blank" href="https://fonts.google.com/specimen/Poppins">https://fonts.google.com/specimen/Poppins</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Kaushan+Script</span> <a target="_blank" href="https://fonts.google.com/specimen/Kaushan+Script">https://fonts.google.com/specimen/Kaushan+Script</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Ionicons</span> <a target="_blank" href="http://ionicons.com/">http://ionicons.com/</a>
+					</li>
+				</ul>
+				<h3>Images and Videos</h3>
+				<p>Any Images and Videos used in previews are not included in this item or final purchase.</p>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">Unsplash</span> <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Pexels</span> <a target="_blank" href="https://www.pexels.com/">https://www.pexels.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Graphicburger</span> <a target="_blank" href="http://graphicburger.com/">http://graphicburger.com/</a>
+					</li>
+				</ul>
+			</article>		
+		</div>
+	</div>
+<script src="assets/rainbow-custom.min.js"></script> 
+</body>
+</html>
