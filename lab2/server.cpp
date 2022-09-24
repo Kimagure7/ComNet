@@ -32,7 +32,7 @@ void *msg_pop(void *data)
     {
         for (int id = 0; id < MAX_USERS; id++)
         {
-
+            if(!used[id])continue;
             //总共开一个子线程负责发送消息
             char msg[BUF] = "";
             char buffer[BUF * 2] = "";
