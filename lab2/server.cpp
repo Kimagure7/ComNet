@@ -6,7 +6,6 @@
 #include <netinet/in.h>
 #include <pthread.h>
 #include <queue>
-#include <fcntl.h>
 
 #define BUF 1024
 #define MAX_USERS 32
@@ -56,7 +55,7 @@ void *msg_pop(void *data)
                     // TODO：找到换行符直接发，到了结尾也直接发
                     if (msg[i] == '\n' || i == (len - 1))
                     {
-                        strncpy(buffer + 9, msg + temp + 1, i - temp);//+1 是为了跳过换行符
+                        strncpy(buffer + 9, msg + temp + 1, i - temp); //+1 是为了跳过换行符
                         // TODO:第二步处理 如果send没发全 就while一直发出去
                         int length = strlen(buffer);
                         int send_length = 0; //记录已发送的字节数
@@ -81,37 +80,9 @@ void *msg_pop(void *data)
                         }
                         memset(buffer, 0, sizeof(buffer));
                         sprintf(buffer, "user %2d: ", id); //恢复初始状态
-                        temp = i;                      
+                        temp = i;
                     }
                 }
-                // if (temp != len) //现在需要把剩下的发出去
-                // {
-                //     //如果沒有換行符
-                //     strncpy(buffer + 9, msg, strlen(msg)); //全弄过来
-                //     int length = strlen(buffer);
-                //     int send_length = 0; //记录已发送的字节数
-                //     int send_return = 0; // send的返回值
-                //     for (int j = 0; j < MAX_USERS; j++)
-                //     {
-                //         if (used[j] && j != id)
-                //         {
-                //             while (send_length < length)
-                //             {
-                //                 send_return = send(client[j], buffer + send_length, length - send_length, 0); //每次都尝试发送剩下的所有信息
-                //                 if (send_return == -1)
-                //                 {
-                //                     perror("send");
-                //                     exit(-1);
-                //                 }
-                //                 send_length += send_return;
-                //             }
-                //             send_return = 0;
-                //             send_length = 0;
-                //         }
-                //     }
-                //     memset(buffer, 0, sizeof(buffer));
-                //     sprintf(buffer, "user %2d: ", id); //恢复初始状态
-                // }
                 memset(msg, 0, sizeof(msg));
             }
         }
@@ -128,11 +99,16 @@ void *msg_push(void *data)
         if (len <= 0)
         {
             // <0 : error   =0: 连接中断
-            used[user->id] = 0;
             close(client[user->id]);
-            //存在内存管理隐患 不想管了
-            queue<char *> empty;
-            swap(empty, msg_queue[user->id]); //清空消息队列
+            //以下方法存在内存管理漏洞 字符串的空间并没有被free
+            // queue<char *> empty;
+            // swap(empty, msg_queue[user->id]); //清空消息队列
+            while (!msg_queue[user->id].empty())
+            {
+                free(msg_queue[user->id].front());
+                msg_queue[user->id].pop();
+            }
+            used[user->id] = 0;
             return 0;
         }
         char *mess_temp = (char *)malloc(sizeof(char) * BUF); //应该需要申请内存
@@ -140,7 +116,7 @@ void *msg_push(void *data)
         pthread_mutex_lock(&mutex);
         msg_queue[user->id].push(mess_temp);
         pthread_mutex_unlock(&mutex);
-        memset(msg,0,sizeof(msg));
+        memset(msg, 0, sizeof(msg));
     }
 }
 
